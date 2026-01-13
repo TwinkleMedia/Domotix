@@ -794,16 +794,21 @@ ul.list-check li:before {
   }
 }
 
+.Clientcontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .client-section {
-  padding: 60px 20px;
-  border-radius: 8px;
+  overflow: hidden;
 }
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   color: #101D44;
 }
 
@@ -811,21 +816,17 @@ ul.list-check li:before {
   overflow: hidden;
   position: relative;
   width: 100%;
+  padding: 20px 0;
 }
 
 .slider-track {
   display: flex;
-  width: max-content;
-  animation: scroll 20s linear infinite;
-}
-
-.slider-track:hover {
-  animation-play-state: paused;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
 }
 
 .client-logo {
   flex-shrink: 0;
-  height: auto;
   margin: 0 30px;
   display: flex;
   align-items: center;
@@ -833,15 +834,27 @@ ul.list-check li:before {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.client-logo img {
-  max-width: 200px;
-  max-height: 120px;
-  object-fit: contain;
-}
-
 .client-logo:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.client-logo img {
+  max-width: 200px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.client-logo:hover img {
+  filter: grayscale(0%);
+}
+
+/* Pause animation on hover */
+.slider-track:hover {
+  animation-play-state: paused;
 }
 
 @keyframes scroll {
@@ -854,7 +867,7 @@ ul.list-check li:before {
   }
 }
 
-/* Responsive Design */
+/* Tablet and below */
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
@@ -862,10 +875,12 @@ ul.list-check li:before {
   }
 
   .client-logo {
-    width: 150px;
-    height: 90px;
     margin: 0 20px;
-    font-size: 1rem;
+  }
+
+  .client-logo img {
+    max-width: 150px;
+    max-height: 90px;
   }
 
   .slider-track {
@@ -873,21 +888,28 @@ ul.list-check li:before {
   }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
+  .content {
+    padding: 40px 0;
+  }
+
+  .Clientcontainer {
+    padding: 0 15px;
+  }
+
   .section-title {
     font-size: 1.5rem;
     margin-bottom: 30px;
   }
 
-  .client-section {
-    padding: 40px 15px;
+  .client-logo {
+    margin: 0 15px;
   }
 
-  .client-logo {
-    width: 120px;
-    height: 75px;
-    margin: 0 15px;
-    font-size: 0.9rem;
+  .client-logo img {
+    max-width: 120px;
+    max-height: 75px;
   }
 
   .slider-track {
@@ -1805,6 +1827,7 @@ ul.top-info-box>li.nav-search i {
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
@@ -4163,26 +4186,6 @@ a.freequote:focus {
 
 .accordion-group.accordion-classic .card-header .btn:before {
   display: none;
-}
-
-/* Clients */
-.clients-logo {
-  margin: 0 0 30px;
-  border: 1px solid #dadada;
-  min-height: 105px;
-  padding: 0 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
-.clients-logo img {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  -webkit-filter: gray;
-  filter: gray;
 }
 
 /* Testimonial

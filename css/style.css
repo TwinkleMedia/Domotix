@@ -112,7 +112,6 @@ body {
   height: 100%;
   z-index: 99999;
 }
-
 a:link,
 a:visited {
   text-decoration: none;
@@ -2411,7 +2410,7 @@ ul.navbar-nav>li>a {
 
 .navbar-light ul.navbar-nav>li>a {
   color: #000 !important;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 /* Dropdown */
@@ -4301,7 +4300,62 @@ a.freequote:focus {
 .readmore:visited {
   color: #fff;
 }
+/* Header Sticky Styles */
+.header {
+  background: #fff;
+  position: relative;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
 
+.navbar-fixed {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+  background: #fff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease;
+}
+
+/* Smooth slide down animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Add padding to body when header becomes fixed to prevent content jump */
+body.header-fixed {
+  padding-top: 80px; /* Adjust based on your header height */
+}
+
+/* For header-one style (dark header) */
+.header-one.navbar-fixed {
+  background: #101D44 !important;
+}
+
+/* Responsive sticky header */
+@media (max-width: 991px) {
+  .navbar-fixed {
+    padding: 10px 0;
+  }
+  
+  body.header-fixed {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  body.header-fixed {
+    padding-top: 60px;
+  }
+}
 .copyright-info {
   color: #fff;
 }

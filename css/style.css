@@ -42,6 +42,10 @@ p {
   color: #000;
 }
 
+.color {
+  color: #f57e12 !important;
+}
+
 h1 {
   font-size: 36px;
   line-height: 48px;
@@ -146,6 +150,12 @@ section,
 
 .no-padding {
   padding: 0;
+}
+
+#formBox {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 .gap-60 {
@@ -1235,27 +1245,38 @@ ul.list-check li:before {
   }
 }
 
+#main-container {
+  max-width: 100% !important;
+  margin: 0;
+  padding: 60px 0;
+  background-color: #e8eaf6;
+  /* Light blue background */
+}
+
 .mission-vision-section {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   border-radius: 8px;
+  padding: 60px 20px;
 }
 
 .Mcontainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .vcolumn {
   background-color: #fff;
   border-radius: 20px;
-  padding: 20px;
+  padding: 40px;
 }
 
 .vcolumn h2 {
   color: #101D44;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 30px;
   text-align: center;
@@ -1266,86 +1287,132 @@ ul.list-check li:before {
   font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 25px;
+  text-align: justify;
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
   .mission-vision-section {
-    padding: 50px 60px;
+    padding: 50px 30px;
   }
 
   .Mcontainer {
     gap: 60px;
   }
 
-  .column h2 {
+  .vcolumn {
+    padding: 35px;
+  }
+
+  .vcolumn h2 {
     font-size: 2.2rem;
+  }
+
+  .vcolumn p {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 992px) {
   .mission-vision-section {
-    padding: 40px 40px;
+    padding: 40px 20px;
   }
 
   .Mcontainer {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
   }
 
-  .column h2 {
+  .vcolumn {
+    padding: 30px;
+  }
+
+  .vcolumn h2 {
     font-size: 2rem;
   }
 
-  .column p {
-    font-size: 1.02rem;
+  .vcolumn p {
+    font-size: 0.98rem;
+    line-height: 1.7;
   }
 }
 
 @media (max-width: 768px) {
   .mission-vision-section {
-    padding: 35px 30px;
+    padding: 35px 15px;
   }
 
   .Mcontainer {
-    gap: 40px;
+    gap: 30px;
   }
 
-  .column h2 {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
+  .vcolumn {
+    padding: 25px 20px;
+    border-radius: 15px;
   }
 
-  .column p {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .Mcontainer {
-    gap: 35px;
-  }
-
-  .mission-vision-section {
-    padding: 30px 20px;
-  }
-
-  .column h2 {
+  .vcolumn h2 {
     font-size: 1.6rem;
     margin-bottom: 20px;
   }
 
-  .column p {
-    font-size: 0.95rem;
-    line-height: 1.65;
-    margin-bottom: 18px;
+  .vcolumn p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
   }
 }
 
+@media (max-width: 576px) {
+  .mission-vision-section {
+    padding: 30px 15px;
+  }
+
+  .Mcontainer {
+    gap: 25px;
+  }
+
+  .vcolumn {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+
+  .vcolumn h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .vcolumn p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .mission-vision-section {
+    padding: 25px 10px;
+  }
+
+  .vcolumn {
+    padding: 18px 12px;
+  }
+
+  .vcolumn h2 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+  }
+
+  .vcolumn p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+/* FAQ Section */
 .faq-section {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 60px 20px;
 }
@@ -1370,15 +1437,15 @@ ul.list-check li:before {
 }
 
 .faq-column {
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 .faq-column.left {
-  padding-right: 50px;
+  padding-right: 30px;
 }
 
 .faq-column.right {
-  padding-left: 50px;
+  padding-left: 30px;
 }
 
 .faq-item {
@@ -1414,6 +1481,10 @@ ul.list-check li:before {
 
 .faq-question:hover {
   background-color: #fafafa;
+}
+
+.faq-item.active .faq-question:hover {
+  background-color: #f57e12;
 }
 
 .faq-question-text {
@@ -1455,18 +1526,30 @@ ul.list-check li:before {
   line-height: 1.7;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .faq-column.left {
-    padding-right: 40px;
+/* FAQ Responsive Design */
+@media (max-width: 1200px) {
+  .faq-title {
+    font-size: 2.5rem;
   }
 
-  .faq-column.right {
-    padding-left: 40px;
+  .faq-question-text {
+    font-size: 1rem;
+  }
+
+  .faq-answer-text {
+    font-size: 0.95rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .faq-section {
+    padding: 50px 20px;
+  }
+
+  .faq-header {
+    margin-bottom: 50px;
+  }
+
   .faq-title {
     font-size: 2.2rem;
   }
@@ -1474,33 +1557,11 @@ ul.list-check li:before {
   .faq-subtitle {
     font-size: 1rem;
   }
-
-  .faq-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .faq-container::before {
-    display: none;
-  }
-
-  .faq-column {
-    padding: 0 20px;
-  }
-
-  .faq-column.left,
-  .faq-column.right {
-    padding: 0 20px;
-  }
-
-  .faq-question-text {
-    font-size: 1rem;
-  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .faq-section {
-    padding: 40px 10px;
+    padding: 40px 15px;
   }
 
   .faq-header {
@@ -1509,6 +1570,10 @@ ul.list-check li:before {
 
   .faq-title {
     font-size: 1.8rem;
+  }
+
+  .faq-subtitle {
+    font-size: 0.95rem;
   }
 
   .faq-column {
@@ -1528,8 +1593,157 @@ ul.list-check li:before {
     font-size: 0.95rem;
   }
 
+  .faq-answer-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
   .faq-item.active .faq-answer {
     padding: 16px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .faq-section {
+    padding: 35px 12px;
+  }
+
+  .faq-header {
+    margin-bottom: 35px;
+  }
+
+  .faq-title {
+    font-size: 1.5rem;
+  }
+
+  .faq-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .faq-column {
+    padding: 0 8px;
+  }
+
+  .faq-column.left,
+  .faq-column.right {
+    padding: 0 8px;
+  }
+
+  .faq-item {
+    margin-bottom: 15px;
+  }
+
+  .faq-question {
+    padding: 14px 16px;
+  }
+
+  .faq-question-text {
+    font-size: 0.88rem;
+    padding-right: 12px;
+  }
+
+  .faq-icon {
+    font-size: 1.3rem;
+  }
+
+  .faq-answer-text {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .faq-section {
+    padding: 30px 10px;
+  }
+
+  .faq-title {
+    font-size: 1.3rem;
+  }
+
+  .faq-question {
+    padding: 12px 14px;
+  }
+
+  .faq-question-text {
+    font-size: 0.82rem;
+  }
+
+  .faq-answer-text {
+    font-size: 0.8rem;
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 12px 14px;
+  }
+}
+
+/* "Who We Are" Section Responsive */
+#main-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+#main-container .column-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#main-container p {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  #main-container {
+    padding: 40px 15px;
+  }
+
+  #main-container .column-title {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  #main-container p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 576px) {
+  #main-container {
+    padding: 30px 12px;
+  }
+
+  #main-container .column-title {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+
+  #main-container p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 400px) {
+  #main-container {
+    padding: 25px 10px;
+  }
+
+  #main-container .column-title {
+    font-size: 1.25rem;
+  }
+
+  #main-container p {
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 }
 
@@ -1637,7 +1851,8 @@ ul.list-check li:before {
   }
 
   .Brandh2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 
   .Brandp {
@@ -1645,7 +1860,7 @@ ul.list-check li:before {
   }
 
   .brand-logos-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2,1fr);
     gap: 20px;
     padding: 0;
   }
@@ -2537,6 +2752,7 @@ a.freequote:focus {
   font-weight: 300;
   color: #fff;
   margin: 20px 0 10px;
+  text-align: center;
 }
 
 @media (max-width: 991px) {
@@ -2560,6 +2776,7 @@ a.freequote:focus {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: -1px;
+  text-align: center;
 }
 
 @media (max-width: 991px) {
@@ -3011,14 +3228,14 @@ a.freequote:focus {
 
 /* Service box bg */
 .ts-service-box-bg {
-  background: #101D44;
-  color: #fff;
+  background: #d4dfff;
+  color: #101D44;
   padding: 30px;
 }
 
 .ts-service-box-bg h4,
 .ts-service-box-bg h3 {
-  color: #fff;
+  color: #101D44;
 }
 
 /* Service box 
@@ -3175,7 +3392,7 @@ a.freequote:focus {
 }
 
 .Solutioncontainer {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   background-color: #fff;
   padding: 40px;
@@ -3766,7 +3983,7 @@ a.freequote:focus {
   }
 
   .header-section h2 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
 
   .header-section p {
@@ -3774,7 +3991,8 @@ a.freequote:focus {
   }
 
   .key-components h2 {
-    font-size: 1.9rem;
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
   }
 
   .key-components ul li {
@@ -3792,7 +4010,7 @@ a.freequote:focus {
   }
 
   .header-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 
   .header-section p {
@@ -3804,7 +4022,7 @@ a.freequote:focus {
   }
 
   .key-components h2 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 
   .key-components ul li {
@@ -3955,15 +4173,12 @@ a.freequote:focus {
   }
 
   .industryh2 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 
   .industryp {
     font-size: 1rem;
-  }
-
-  .industryh2 {
-    font-size: 1.9rem;
   }
 
   .key-components ul li {
@@ -3981,7 +4196,7 @@ a.freequote:focus {
   }
 
   .header-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 
   .header-section p {
@@ -3993,7 +4208,7 @@ a.freequote:focus {
   }
 
   .key-components h2 {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
   }
 
   .key-components ul li {
@@ -4087,9 +4302,18 @@ a.freequote:focus {
   color: #fff;
 }
 
+.copyright-info {
+  color: #fff;
+}
+
+.list-unstyled {
+  color: #fff;
+}
+
 /* contact section */
 .contactp {
-  color: #fff;
+  color: #101D44;
+  text-align: center !important;
 }
 
 /* Responsive Design */

@@ -134,7 +134,7 @@ a.read-more:hover {
   color: #222;
 }
 
-.container {
+#custom-container {
   max-width: 1400px !important;
 }
 

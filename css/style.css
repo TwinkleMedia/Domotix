@@ -306,9 +306,6 @@ a:focus {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo-area {
-  padding: 15px 0;
-}
 
 .logo img {
   max-height: 60px;
@@ -701,7 +698,7 @@ ul.list-check li:before {
 }
 
 .tts-section-title-custom {
-  font-size: 36px;
+  font-size: 2rem;
   font-weight: 700;
   color: #101D44;
   margin-bottom: 10px;
@@ -1092,14 +1089,14 @@ ul.list-check li:before {
 }
 
 .intro-title {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-weight: 700;
   color: #101D44;
   margin-bottom: 20px;
 }
 
 .intro-sub-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #101D44;
   margin-bottom: 25px;
@@ -1283,7 +1280,7 @@ ul.list-check li:before {
 
 .vcolumn h2 {
   color: #101D44;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 30px;
   text-align: center;
@@ -1439,7 +1436,7 @@ ul.list-check li:before {
 
 .faq-title {
   color: #101D44;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -1999,7 +1996,7 @@ a[href^=tel] {
 /* Top Bar
 ================================================== */
 .top-bar {
-  padding: 8px 0;
+  padding: 5px 0;
   background: #101D44;
   position: relative;
 }
@@ -3181,7 +3178,7 @@ a.freequote:focus {
 
 .ts-facts .ts-facts-content .ts-facts-num {
   color: #fff;
-  font-size: 44px;
+  font-size: 40px;
   margin: 30px 0 20px;
 }
 
@@ -3408,7 +3405,7 @@ a.freequote:focus {
 }
 
 .solutionsh1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #101D44;
   margin-bottom: 20px;
   text-align: center;
@@ -3417,7 +3414,7 @@ a.freequote:focus {
 }
 
 .solutionsh2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #101D44;
   margin-bottom: 15px;
   padding-bottom: 10px;
@@ -3495,9 +3492,6 @@ a.freequote:focus {
     font-size: 1rem;
   }
 
-  .container {
-    padding: 20px;
-  }
 
   .fire-alarm-flex {
     flex-direction: column;
@@ -3535,9 +3529,6 @@ a.freequote:focus {
     padding: 30px 10px;
   }
 
-  .container {
-    padding: 15px;
-  }
 }
 
 /* security page */
@@ -3563,7 +3554,7 @@ a.freequote:focus {
 }
 
 .securityh1 {
-  font-size: 3.5rem;
+  font-size: 2rem;
   color: #101D44;
   margin-bottom: 25px;
   font-weight: 700;
@@ -3585,7 +3576,7 @@ a.freequote:focus {
 }
 
 .securityp {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #000000;
   text-align: justify;
   line-height: 1.9;
@@ -3669,10 +3660,6 @@ a.freequote:focus {
     padding: 30px 15px;
   }
 
-  .container {
-    padding: 25px 20px;
-  }
-
   .securityh1 {
     font-size: 1.8rem;
   }
@@ -3697,7 +3684,7 @@ a.freequote:focus {
 }
 
 .bmsh1 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #101D44;
   margin-bottom: 25px;
   font-weight: 700;
@@ -3732,7 +3719,7 @@ a.freequote:focus {
 }
 
 .bmsh2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: #101D44;
   margin-bottom: 35px;
   font-weight: 700;
@@ -3985,9 +3972,7 @@ a.freequote:focus {
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 35px;
-  }
+
 
   .header-section h2 {
     font-size: 1.5rem;
@@ -4012,9 +3997,7 @@ a.freequote:focus {
     padding: 30px 15px;
   }
 
-  .container {
-    padding: 25px 20px;
-  }
+
 
   .header-section h2 {
     font-size: 1.2rem;
@@ -4058,7 +4041,7 @@ a.freequote:focus {
 }
 
 .industryh2 {
-  font-size: 2.8rem;
+  font-size: 2rem;
   color: #101D44;
   margin-bottom: 25px;
   font-weight: 700;
@@ -4126,7 +4109,7 @@ a.freequote:focus {
 }
 
 .key-components h2 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: #101D44;
   margin-bottom: 25px;
   font-weight: 700;
@@ -5012,7 +4995,7 @@ img.testimonial-thumb {
 }
 
 .footer-main {
-  padding: 80px 0 60px;
+  padding: 25px 0;
 }
 
 .footer .widget-title {
@@ -5147,7 +5130,6 @@ img.testimonial-thumb {
 .copyright {
   background: #f57e12;
   color: #111;
-  padding: 25px 0;
   position: relative;
   z-index: 1;
   font-weight: 600;

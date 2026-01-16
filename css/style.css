@@ -7,13 +7,20 @@ Description: Constra - Construction Html5 Template
 /*------------------------------------------------------------------
 [TABLE OF CONTENTS]
 -------------------------------------------------------------------*/
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,600i,700,700i,800|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;600;700;800&display=swap');
 
 /* Typography
 ================================================== */
 body {
   background: #fff;
   color: #555;
+}
+
+/* Mobile Fix - Add at the very top */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body,
@@ -112,6 +119,7 @@ body {
   height: 100%;
   z-index: 99999;
 }
+
 a:link,
 a:visited {
   text-decoration: none;
@@ -1859,7 +1867,7 @@ ul.list-check li:before {
   }
 
   .brand-logos-grid {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 0;
   }
@@ -4300,6 +4308,7 @@ a.freequote:focus {
 .readmore:visited {
   color: #fff;
 }
+
 /* Header Sticky Styles */
 .header {
   background: #fff;
@@ -4325,6 +4334,7 @@ a.freequote:focus {
   from {
     transform: translateY(-100%);
   }
+
   to {
     transform: translateY(0);
   }
@@ -4332,7 +4342,8 @@ a.freequote:focus {
 
 /* Add padding to body when header becomes fixed to prevent content jump */
 body.header-fixed {
-  padding-top: 80px; /* Adjust based on your header height */
+  padding-top: 80px;
+  /* Adjust based on your header height */
 }
 
 /* For header-one style (dark header) */
@@ -4345,7 +4356,7 @@ body.header-fixed {
   .navbar-fixed {
     padding: 10px 0;
   }
-  
+
   body.header-fixed {
     padding-top: 70px;
   }
@@ -4356,6 +4367,7 @@ body.header-fixed {
     padding-top: 60px;
   }
 }
+
 .copyright-info {
   color: #fff;
 }

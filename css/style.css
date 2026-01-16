@@ -308,7 +308,7 @@ a:focus {
 
 
 .logo img {
-  max-height: 60px;
+  max-height: 50px;
   width: auto;
 }
 
@@ -2164,11 +2164,6 @@ ul.navbar-nav>li.active>a {
   color: #F08422 !important;
 }
 
-/*-- Logo --*/
-.logo img {
-  width: auto;
-  height: 80px;
-}
 
 .header-two .logo img {
   height: 30px;
@@ -2416,7 +2411,7 @@ ul.navbar-nav>li>a {
 
 .navbar-light ul.navbar-nav>li>a {
   color: #000 !important;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 /* Dropdown */

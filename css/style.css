@@ -406,7 +406,7 @@ a:focus {
   }
 
   .navbar-nav {
-    justify-content: flex-end;
+    justify-content: center;
   }
 }
 
@@ -418,6 +418,7 @@ a:focus {
   .navbar-nav {
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
   }
 
   .dropdown-menu,

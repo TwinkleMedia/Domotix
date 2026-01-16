@@ -320,7 +320,7 @@ a:focus {
 .navbar-nav {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
@@ -2122,7 +2122,7 @@ ul.top-info li p.info-text {
   }
 }
 
-.header-one .logo-area {
+.header-one {
   padding: 30px 0;
 }
 

@@ -2122,11 +2122,6 @@ ul.top-info li p.info-text {
     padding-right: 0;
   }
 }
-
-.header-one {
-  padding: 30px 0;
-}
-
 .navbar-fixed {
   z-index: 9999;
   position: fixed;
@@ -3934,7 +3929,7 @@ a.freequote:focus {
 }
 
 .key-components ul li {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: #374151;
   margin-bottom: 15px;
   padding: 15px 18px;
@@ -4037,7 +4032,7 @@ a.freequote:focus {
 }
 
 .industryh2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #101D44;
   margin-bottom: 25px;
   font-weight: 700;
@@ -4105,7 +4100,7 @@ a.freequote:focus {
 }
 
 .key-components h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #101D44;
   margin-bottom: 25px;
   font-weight: 700;
@@ -4999,7 +4994,6 @@ img.testimonial-thumb {
   font-weight: 700;
   position: relative;
   margin: 0 0 30px;
-  padding-left: 15px;
   text-transform: uppercase;
   color: #fff;
 }

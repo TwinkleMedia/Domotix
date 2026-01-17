@@ -306,7 +306,138 @@ a:focus {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* ========================================
+   NAVIGATION CENTER FIX - Add at the very end of your CSS file
+   ======================================== */
 
+/* Force center alignment with maximum specificity */
+.navbar .navbar-collapse .navbar-nav,
+#navbar-collapse .navbar-nav,
+.navbar-collapse .navbar-nav,
+.site-navigation .navbar-nav,
+.header .navbar-nav,
+.header-one .navbar-nav,
+.header-two .navbar-nav {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Remove any Bootstrap auto-margins */
+.navbar-nav.ml-auto,
+.navbar-nav.ms-auto,
+.navbar-nav.mr-auto,
+.navbar-nav.me-auto {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Ensure proper nav item spacing */
+.navbar-nav .nav-item {
+  position: relative;
+  margin: 0 5px;
+}
+
+.navbar-nav>li {
+  margin: 0 5px;
+}
+
+/* Desktop view - centered navigation */
+@media (min-width: 992px) {
+
+  .navbar-expand-lg .navbar-nav,
+  .navbar-expand-md .navbar-nav {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: row !important;
+  }
+
+  /* Override any flexbox utilities */
+  .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center !important;
+  }
+}
+
+/* Mobile view - keep left aligned for better UX */
+@media (max-width: 991px) {
+  .navbar-nav {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-nav {
+    justify-content: center !important;
+  }
+}
+
+/* Fix for sticky header */
+.navbar-fixed .navbar-nav {
+  justify-content: center !important;
+}
+
+/* Remove any conflicting Bootstrap 5 utilities */
+.navbar .justify-content-end,
+.navbar .justify-content-start {
+  justify-content: center !important;
+}
+
+/* Ensure container doesn't push content */
+.navbar .container,
+.navbar .container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+
+  .navbar .container,
+  .navbar .container-fluid {
+    justify-content: center;
+  }
+
+  .navbar-brand {
+    margin-right: auto;
+  }
+
+  .navbar-collapse {
+    justify-content: center;
+    flex-grow: 1;
+  }
+}
+
+/* If using Bootstrap 5 navbar-nav-scroll */
+.navbar-nav-scroll {
+  justify-content: center !important;
+}
+
+/* Additional specificity for stubborn cases */
+header .navbar .navbar-nav,
+.site-navigation .navbar .navbar-nav,
+nav .navbar-nav {
+  justify-content: center !important;
+}
+
+/* End Navigation Center Fix */
 .logo img {
   max-height: 50px;
   width: auto;
@@ -2122,6 +2253,7 @@ ul.top-info li p.info-text {
     padding-right: 0;
   }
 }
+
 .navbar-fixed {
   z-index: 9999;
   position: fixed;

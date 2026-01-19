@@ -2240,7 +2240,7 @@ ul.top-info li p.info-text {
   color: #ffffff;
   font-size: 14px;
   transition: 400ms;
-  padding: 9px 12px;
+  padding: 9px;
 }
 
 .top-social ul li a:hover {

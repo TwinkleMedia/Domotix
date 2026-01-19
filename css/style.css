@@ -436,7 +436,173 @@ a:focus {
     display: block;
   }
 }
+/* Mobile Logo and Menu Button Side by Side */
+/* Mobile Header - Full Width Spread */
+@media (max-width: 991px) {
+  .header .container,
+  #custom-container {
+    max-width: 100% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
+  .logo-area .row {
+    align-items: center;
+    margin: 0;
+  }
+
+  .logo {
+    text-align: left !important;
+    margin-bottom: 0 !important;
+  }
+
+  .logo.col-lg-3.col-md-12 {
+    flex: 0 0 auto;
+    width: auto;
+    padding-left: 0;
+  }
+
+  .col-lg-9.col-md-12 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 0;
+  }
+
+  .navbar {
+    padding: 0;
+    width: auto;
+  }
+
+  .navbar-toggler {
+    margin: 0;
+    float: none;
+  }
+
+  /* Backdrop overlay */
+  .navbar-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+  }
+
+  .navbar-backdrop.show {
+    display: block;
+  }
+
+  /* Mobile navbar overlay - Slide from RIGHT */
+  #navbar-collapse {
+    position: fixed !important;
+    top: 0;
+    right: -100% !important; /* Start hidden on RIGHT */
+    left: auto !important; /* Override any left positioning */
+    width: 280px;
+    height: 100vh;
+    background: #f57e12;
+    transition: right 0.3s ease; /* Animate from RIGHT */
+    overflow-y: auto;
+    z-index: 9999;
+    padding: 20px 0;
+  }
+
+  #navbar-collapse.show {
+    right: 0 !important; /* Slide to visible on RIGHT */
+    left: auto !important;
+  }
+
+  /* Close button for mobile menu - on LEFT side of panel */
+  #navbar-collapse::before {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    top: 15px;
+    left: 15px; /* X button on LEFT side of menu panel */
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+    z-index: 10000;
+  }
+
+  /* Navigation links styling */
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    padding: 40px 0 20px 0;
+  }
+
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  ul.navbar-nav > li > a {
+    color: #fff !important;
+    padding: 15px 25px !important;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f57e12 !important;
+  }
+
+  /* Dropdown menus in mobile */
+  .dropdown-menu {
+    position: static !important;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+    padding-left: 15px;
+    border: none;
+    width: 100%;
+  }
+
+  .dropdown-menu li a {
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Submenu styling */
+  .submenu {
+    position: static !important;
+    background: rgba(0, 0, 0, 0.3);
+    padding-left: 15px;
+    box-shadow: none;
+    border: none;
+  }
+
+  .submenu li a {
+    color: #fff !important;
+  }
+
+  /* Prevent body scroll when menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  /* Remove default padding that pushes content */
+  body.header-fixed {
+    padding-top: 80px !important;
+  }
+}
+
+/* Desktop - keep normal behavior */
+@media (min-width: 992px) {
+  #navbar-collapse {
+    position: static;
+    background: transparent;
+    height: auto;
+  }
+}
 /* Title Border */
 /* Section title */
 .section-title {
@@ -683,7 +849,7 @@ ul.list-check li:before {
 }
 
 .tts-service-area-custom {
-  padding: 80px 0;
+  padding: 30px 0;
   background-color: #ffffff;
 }
 
@@ -699,7 +865,7 @@ ul.list-check li:before {
 }
 
 .tts-section-title-custom {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #101D44;
   margin-bottom: 10px;
@@ -811,7 +977,7 @@ ul.list-check li:before {
 
 .services-box-title {
   margin: 0;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.4;
@@ -963,7 +1129,7 @@ ul.list-check li:before {
 
 .section-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 40px;
   color: #101D44;
@@ -997,7 +1163,7 @@ ul.list-check li:before {
 }
 
 .client-logo img {
-  max-width: 200px;
+  max-width: 120px;
   max-height: 120px;
   width: auto;
   height: auto;
@@ -1090,14 +1256,14 @@ ul.list-check li:before {
 }
 
 .intro-title {
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #101D44;
   margin-bottom: 20px;
 }
 
 .intro-sub-title {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #101D44;
   margin-bottom: 25px;
@@ -1164,7 +1330,7 @@ ul.list-check li:before {
 }
 
 .service-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #333;
   line-height: 1.4;
@@ -2474,6 +2640,7 @@ ul.navbar-nav>li>a {
 
 .navbar-nav>li>.dropdown-menu a {
   background: none;
+  color: #101D44;
 }
 
 .dropdown-menu li a {
@@ -3169,12 +3336,12 @@ a.freequote:focus {
 
 .ts-facts .ts-facts-content .ts-facts-num {
   color: #fff;
-  font-size: 40px;
+  font-size: 30px;
   margin: 30px 0 20px;
 }
 
 .ts-facts .ts-facts-content .ts-facts-title {
-  font-size: 16px;
+  font-size: 1rem;
   color: #f57e12;
   margin: 0;
 }
@@ -3471,6 +3638,14 @@ a.freequote:focus {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .ts-facts .ts-facts-content .ts-facts-num
+  {
+    font-size: 1.2rem;
+  }
+  .ts-facts .ts-facts-content .ts-facts-title
+  {
+    font-size: 0.8rem;
+  }
   .solutionsh1 {
     font-size: 2rem;
   }
@@ -4881,23 +5056,75 @@ img.testimonial-thumb {
 @media (max-width: 575px) {
   .subscribe-call-to-acton {
     text-align: center;
-    padding: 30px 0;
+    padding: 5px 0;
     min-height: auto;
   }
 }
 
 .subscribe-call-to-acton h3 {
-  font-size: 18px;
+  font-size: 1rem;
   margin-top: 0;
   margin-bottom: 5px;
 }
-
+.fontsize
+{
+  font-size: 1rem;
+}
 .subscribe-call-to-acton h4 {
   color: #fff;
-  font-size: 24px;
+  font-size: 0.8rem;
   margin: 0;
 }
+/* Footer Locations under Working Hours */
+.footer-locations-inline {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
 
+.footer-locations-inline .widget-title {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.locations-list-inline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 15px;
+    align-items: center;
+    justify-content: center;
+}
+.locations-list-inline li {
+  color: #ccc;
+  font-size: 14px;
+  position: relative;
+  padding: 0 10px;
+}
+
+.locations-list-inline li:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -8px;
+  color: #f57e12;
+}
+#locationTitle
+{
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .locations-list-inline {
+    gap: 8px;
+  }
+  
+  .locations-list-inline li::after {
+    display: none;
+  }
+}
 /* Newsletter */
 .ts-newsletter {
   background: #101D44;
@@ -4915,7 +5142,7 @@ img.testimonial-thumb {
 
 @media (max-width: 575px) {
   .ts-newsletter {
-    padding: 30px 5px 15px 5px;
+    padding: 5px 5px 15px 5px;
     min-height: auto;
     text-align: center;
   }

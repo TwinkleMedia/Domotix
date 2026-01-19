@@ -436,9 +436,11 @@ a:focus {
     display: block;
   }
 }
+
 /* Mobile Logo and Menu Button Side by Side */
 /* Mobile Header - Full Width Spread */
 @media (max-width: 991px) {
+
   .header .container,
   #custom-container {
     max-width: 100% !important;
@@ -500,19 +502,23 @@ a:focus {
   #navbar-collapse {
     position: fixed !important;
     top: 0;
-    right: -100% !important; /* Start hidden on RIGHT */
-    left: auto !important; /* Override any left positioning */
+    right: -100% !important;
+    /* Start hidden on RIGHT */
+    left: auto !important;
+    /* Override any left positioning */
     width: 280px;
     height: 100vh;
     background: #f57e12;
-    transition: right 0.3s ease; /* Animate from RIGHT */
+    transition: right 0.3s ease;
+    /* Animate from RIGHT */
     overflow-y: auto;
     z-index: 9999;
     padding: 20px 0;
   }
 
   #navbar-collapse.show {
-    right: 0 !important; /* Slide to visible on RIGHT */
+    right: 0 !important;
+    /* Slide to visible on RIGHT */
     left: auto !important;
   }
 
@@ -522,7 +528,8 @@ a:focus {
     font-family: "Font Awesome 5 Free";
     position: absolute;
     top: 15px;
-    left: 15px; /* X button on LEFT side of menu panel */
+    left: 15px;
+    /* X button on LEFT side of menu panel */
     font-size: 24px;
     color: #fff;
     cursor: pointer;
@@ -542,7 +549,7 @@ a:focus {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  ul.navbar-nav > li > a {
+  ul.navbar-nav>li>a {
     color: #fff !important;
     padding: 15px 25px !important;
     font-weight: 500;
@@ -580,8 +587,12 @@ a:focus {
     border: none;
   }
 
+  #topnav {
+    flex-wrap: nowrap;
+  }
+
   .submenu li a {
-    color: #fff !important;
+    color: #101D44 !important;
   }
 
   /* Prevent body scroll when menu is open */
@@ -603,10 +614,11 @@ a:focus {
     height: auto;
   }
 }
+
 /* Title Border */
 /* Section title */
 .section-title {
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 28px;
   margin: 0;
   text-transform: uppercase;
@@ -1193,7 +1205,7 @@ ul.list-check li:before {
 /* Tablet and below */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 40px;
   }
 
@@ -1222,7 +1234,7 @@ ul.list-check li:before {
   }
 
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
   }
 
@@ -1428,7 +1440,7 @@ ul.list-check li:before {
   max-width: 1400px;
   margin: 0 auto;
   border-radius: 8px;
-  padding: 60px 20px;
+  padding: 20px;
 }
 
 .Mcontainer {
@@ -1442,12 +1454,12 @@ ul.list-check li:before {
 .vcolumn {
   background-color: #fff;
   border-radius: 20px;
-  padding: 40px;
+  padding: 15px;
 }
 
 .vcolumn h2 {
   color: #101D44;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 30px;
   text-align: center;
@@ -1455,7 +1467,7 @@ ul.list-check li:before {
 
 .vcolumn p {
   color: #333;
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 25px;
   text-align: justify;
@@ -1603,7 +1615,7 @@ ul.list-check li:before {
 
 .faq-title {
   color: #101D44;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 
@@ -1660,7 +1672,7 @@ ul.list-check li:before {
 
 .faq-question-text {
   color: #1a1a1a;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 500;
   flex: 1;
   padding-right: 20px;
@@ -1861,7 +1873,7 @@ ul.list-check li:before {
 }
 
 #main-container .column-title {
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin-bottom: 20px;
 }
 
@@ -1877,12 +1889,12 @@ ul.list-check li:before {
   }
 
   #main-container .column-title {
-    font-size: 1.6rem;
+    font-size: 1rem;
     margin-bottom: 15px;
   }
 
   #main-container p {
-    font-size: 0.92rem;
+    font-size: 0.8rem;
     line-height: 1.6;
   }
 }
@@ -1917,7 +1929,10 @@ ul.list-check li:before {
     line-height: 1.5;
   }
 }
-
+.many
+{
+  color: #101D44;
+}
 /* brands Page */
 .Brand-container {
   padding: 60px 20px;
@@ -1939,14 +1954,14 @@ ul.list-check li:before {
 }
 
 .Brandh2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: #101D44;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
 .Brandp {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #666;
   line-height: 1.8;
   margin: 0 auto;
@@ -2288,6 +2303,7 @@ ul.top-info li p.info-text {
     padding-right: 0;
   }
 }
+
 .navbar-fixed {
   z-index: 9999;
   position: fixed;
@@ -3315,10 +3331,15 @@ a.freequote:focus {
   margin-bottom: 20px;
 }
 
+#fact {
+  background-color: #101D44;
+  padding: 15px;
+}
 /* Facts
 ================================================== */
 #facts {
   background-color: #101D44;
+  padding: 0px;
 }
 
 .facts-wrapper {
@@ -3390,9 +3411,9 @@ a.freequote:focus {
 
 /* Service box bg */
 .ts-service-box-bg {
-  background: #d4dfff;
+  background: #ffffff;
   color: #101D44;
-  padding: 30px;
+  padding: 10px;
 }
 
 .ts-service-box-bg h4,
@@ -3563,7 +3584,7 @@ a.freequote:focus {
 }
 
 .solutionsh1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #101D44;
   margin-bottom: 20px;
   text-align: center;
@@ -3638,14 +3659,14 @@ a.freequote:focus {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .ts-facts .ts-facts-content .ts-facts-num
-  {
+  .ts-facts .ts-facts-content .ts-facts-num {
     font-size: 1.2rem;
   }
-  .ts-facts .ts-facts-content .ts-facts-title
-  {
+
+  .ts-facts .ts-facts-content .ts-facts-title {
     font-size: 0.8rem;
   }
+
   .solutionsh1 {
     font-size: 2rem;
   }
@@ -3720,7 +3741,7 @@ a.freequote:focus {
 }
 
 .securityh1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #101D44;
   margin-bottom: 25px;
   font-weight: 700;
@@ -3850,7 +3871,7 @@ a.freequote:focus {
 }
 
 .bmsh1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #101D44;
   margin-bottom: 25px;
   font-weight: 700;
@@ -3872,7 +3893,7 @@ a.freequote:focus {
 }
 
 .bmsp {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: #000000;
   line-height: 1.8;
   text-align: justify;
@@ -3885,7 +3906,7 @@ a.freequote:focus {
 }
 
 .bmsh2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #101D44;
   margin-bottom: 35px;
   font-weight: 700;
@@ -3976,12 +3997,12 @@ a.freequote:focus {
     padding: 30px 30px;
   }
 
-  h1 {
-    font-size: 2.2rem;
+  .bmsh1 {
+    font-size: 1.5rem;
   }
 
-  h2 {
-    font-size: 2rem;
+  .bmsh2 {
+    font-size: 1.2rem;
   }
 
   .why-bms-content {
@@ -4234,7 +4255,7 @@ a.freequote:focus {
 }
 
 .industryp {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #000000;
   line-height: 1.8;
   text-align: justify;
@@ -4396,7 +4417,7 @@ a.freequote:focus {
 }
 
 .pdfh1 {
-  font-size: 3.5rem;
+  font-size: 1.8rem;
   color: #101D44;
   margin-bottom: 25px;
   font-weight: 700;
@@ -4418,7 +4439,7 @@ a.freequote:focus {
 }
 
 .pdfp {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #000000;
   text-align: justify;
   line-height: 1.9;
@@ -4539,7 +4560,7 @@ body.header-fixed {
   }
 
   .pdfh1 {
-    font-size: 2.8rem;
+    font-size: 1.5rem;
   }
 
   .image-section {
@@ -4559,7 +4580,7 @@ body.header-fixed {
   }
 
   .pdfh1 {
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     text-align: center;
   }
 
@@ -4569,7 +4590,7 @@ body.header-fixed {
   }
 
   .pdfp {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .image-section {
@@ -4592,11 +4613,11 @@ body.header-fixed {
   }
 
   .pdfh1 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 
   .pdfp {
-    font-size: 0.95rem;
+    font-size: 0.5rem;
   }
 }
 
@@ -5066,15 +5087,17 @@ img.testimonial-thumb {
   margin-top: 0;
   margin-bottom: 5px;
 }
-.fontsize
-{
+
+.fontsize {
   font-size: 1rem;
 }
+
 .subscribe-call-to-acton h4 {
   color: #fff;
   font-size: 0.8rem;
   margin: 0;
 }
+
 /* Footer Locations under Working Hours */
 .footer-locations-inline {
   margin-top: 30px;
@@ -5090,15 +5113,16 @@ img.testimonial-thumb {
 }
 
 .locations-list-inline {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 15px;
-    align-items: center;
-    justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 15px;
+  align-items: center;
+  justify-content: center;
 }
+
 .locations-list-inline li {
   color: #ccc;
   font-size: 14px;
@@ -5112,19 +5136,21 @@ img.testimonial-thumb {
   right: -8px;
   color: #f57e12;
 }
-#locationTitle
-{
+
+#locationTitle {
   text-align: center;
 }
+
 @media (max-width: 576px) {
   .locations-list-inline {
     gap: 8px;
   }
-  
+
   .locations-list-inline li::after {
     display: none;
   }
 }
+
 /* Newsletter */
 .ts-newsletter {
   background: #101D44;

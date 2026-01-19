@@ -42,7 +42,7 @@
 
         <div id="top-bar" class="top-bar">
             <div class="container" id="custom-container">
-                <div class="row">
+                <div class="row" id="topnav">
                     <div class="col-lg-8 col-md-8">
                         <ul class="top-info text-center text-md-left">
                             <li><i class="fas fa-map-marker-alt"></i>
@@ -271,22 +271,19 @@
                         <div class="col-lg-4 col-md-6 footer-widget footer-about">
                             <h3 class="widget-title">Address</h3>
                             <img loading="lazy" class="footer-logo" src="images/footer-logo.png" alt="Constra">
-                            <p class="footerp">Domotix Solutions Pvt. Ltd. 314, 3rd Floor, DDA-1, District Centre,
-                                Janakpuri, New Delhi-110058
+                            <p class="footerp">Domotix Solutions Pvt. Ltd. <br>
+                                314, 3rd Floor, DDA-1, District Centre,
+                                <br>Janakpuri, New Delhi-110058
                             </p>
-                            <p class="footerp">phone: +(91) 98738 45962</p>
-                             <p class="footerp">landline: +(91) 11-4474 7178</p>
+                            <p class="footerp">Landline: +(91) 11-4474 7178</p>
+                            <p class="footerp">Phone: +(91) 98738 45962</p>
                             <div class="footer-social">
                                 <ul>
-                                    <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
-                                                class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i
-                                                class="fab fa-twitter"></i></a>
+                                    <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                                     </li>
-                                    <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
-                                                class="fab fa-instagram"></i></a></li>
-                                    <li><a href="https://github.com/themefisher" aria-label="Github"><i
-                                                class="fab fa-linkedin"></i></a>
+                                    <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#" aria-label="Github"><i class="fab fa-linkedin"></i></a>
                                     </li>
                                 </ul>
                             </div><!-- Footer social end -->
@@ -318,9 +315,20 @@
                             </ul>
                         </div><!-- Col end -->
                     </div><!-- Row end -->
+                    <div class="footer-locations-inline">
+                        <h4 class="widget-title" id="locationTitle">LOCATIONS</h4>
+                        <ul class="locations-list-inline">
+                            <li>Mumbai</li>
+                            <li>Vadodara</li>
+                            <li>Bangaluru</li>
+                            <li>Kolkata</li>
+                            <li>Hyderabad</li>
+                            <li>Indore</li>
+                        </ul>
+                    </div>
                 </div><!-- Container end -->
             </div><!-- Footer main end -->
-
+            <!-- NEW: Locations Section -->
             <div class="copyright">
                 <div class="container" id="custom-container">
                     <div class="row align-items-center">
@@ -383,6 +391,119 @@
                 }
             }
         })
+    </script>
+    <script>
+        // Mobile menu overlay functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.navbar-toggler');
+            const navCollapse = document.getElementById('navbar-collapse');
+            const body = document.body;
+
+            // Create backdrop element
+            const backdrop = document.createElement('div');
+            backdrop.className = 'navbar-backdrop';
+            document.body.appendChild(backdrop);
+
+            // Open menu
+            function openNav() {
+                navCollapse.classList.add('show');
+                backdrop.classList.add('show');
+                body.classList.add('menu-open');
+            }
+
+            // Close menu
+            function closeNav() {
+                navCollapse.classList.remove('show');
+                backdrop.classList.remove('show');
+                body.classList.remove('menu-open');
+            }
+
+            // Toggle button click
+            navToggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                if (navCollapse.classList.contains('show')) {
+                    closeNav();
+                } else {
+                    openNav();
+                }
+            });
+
+            // Close button click (the X icon) - UPDATED for RIGHT side menu
+            navCollapse.addEventListener('click', function (e) {
+                // Check if click is in the LEFT area (where X button is on right-side menu)
+                if (e.target === navCollapse && e.offsetX < 50 && e.offsetY < 50) {
+                    closeNav();
+                }
+            });
+
+            // Backdrop click
+            backdrop.addEventListener('click', closeNav);
+
+            // Close menu when clicking on a link (only non-dropdown links)
+            const navLinks = navCollapse.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    // Only close if it's not a dropdown toggle
+                    if (!this.classList.contains('dropdown-toggle')) {
+                        closeNav();
+                    }
+                });
+            });
+
+            // Handle dropdown toggles
+            const dropdownToggles = navCollapse.querySelectorAll('.dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const parent = this.parentElement;
+                    const dropdownMenu = parent.querySelector('.dropdown-menu');
+
+                    // Close other open dropdowns
+                    dropdownToggles.forEach(otherToggle => {
+                        if (otherToggle !== toggle) {
+                            const otherParent = otherToggle.parentElement;
+                            const otherMenu = otherParent.querySelector('.dropdown-menu');
+                            otherParent.classList.remove('show');
+                            if (otherMenu) {
+                                otherMenu.style.display = 'none';
+                            }
+                        }
+                    });
+
+                    // Toggle the current dropdown
+                    parent.classList.toggle('show');
+                    if (dropdownMenu) {
+                        dropdownMenu.style.display = parent.classList.contains('show') ? 'block' : 'none';
+                    }
+                });
+            });
+
+            // Handle submenu toggles (for nested menus)
+            const submenuParents = navCollapse.querySelectorAll('.menu-item');
+            submenuParents.forEach(menuItem => {
+                const submenuToggle = menuItem.querySelector('a');
+                const submenu = menuItem.querySelector('.submenu');
+
+                if (submenu) {
+                    submenuToggle.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+
+                        menuItem.classList.toggle('show');
+                        submenu.style.display = menuItem.classList.contains('show') ? 'block' : 'none';
+                    });
+                }
+            });
+
+            // Close menu on window resize to desktop
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 992) {
+                    closeNav();
+                }
+            });
+        });
     </script>
 </body>
 

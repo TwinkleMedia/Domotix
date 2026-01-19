@@ -508,7 +508,7 @@ a:focus {
     /* Override any left positioning */
     width: 280px;
     height: 100vh;
-    background: #f57e12;
+    background: #fff;
     transition: right 0.3s ease;
     /* Animate from RIGHT */
     overflow-y: auto;

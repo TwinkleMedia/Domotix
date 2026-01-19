@@ -531,7 +531,7 @@ a:focus {
     left: 15px;
     /* X button on LEFT side of menu panel */
     font-size: 24px;
-    color: #fff;
+    color: #f57e12;
     cursor: pointer;
     font-weight: 900;
     z-index: 10000;
@@ -1929,10 +1929,11 @@ ul.list-check li:before {
     line-height: 1.5;
   }
 }
-.many
-{
+
+.many {
   color: #101D44;
 }
+
 /* brands Page */
 .Brand-container {
   padding: 60px 20px;
@@ -3335,6 +3336,7 @@ a.freequote:focus {
   background-color: #101D44;
   padding: 15px;
 }
+
 /* Facts
 ================================================== */
 #facts {
